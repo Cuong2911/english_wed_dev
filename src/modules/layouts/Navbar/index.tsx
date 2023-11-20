@@ -1,9 +1,8 @@
-import React from 'react';
 
-import Button from '../Button/Button';
+import {Button} from '../../../components';
 import './Navbar.css';
 
-const Navbar = () => {
+const index = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-color-primary py-3">
@@ -43,4 +42,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default index;
