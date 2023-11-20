@@ -1,17 +1,23 @@
 :root {
     --bg-color-primary: #1CB0F6;
+    --bg-color-primary-dark: #01357A;
     --bg-color-primary-home: linear-gradient(180deg, #1CB0F6, #0260D9);
 
     --bg-color-primary-btn: #58CC02;
     --bg-color-light-btn: #fff;
 
     --t-color-primary: #fff;
+    --t-color-primary-opa: #a8a8a8;
     --t-color-info:  #1CB0F6;
     --t-color-dark:  #333;
+    --t-color-primary-dark: #01357A;
 }
 
 .bg-color-primary {
     background-color: var(--bg-color-primary) !important;
+}
+.bg-color-primary-dark {
+    background-color: var(--bg-color-primary-dark) !important;;
 }
 .bg-primary-home {
     background: var(--bg-color-primary-home) !important;
@@ -25,6 +31,9 @@
 
 .text-color-primary {
     color: var(--t-color-primary) !important;
+}
+.text-color-primary-dark {
+    color: var(--t-color-primary-dark) !important;
 }
 .text-color-info {
     color: var(--t-color-info) !important;

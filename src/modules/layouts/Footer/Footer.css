@@ -1,3 +1,25 @@
 .footer-container {
-    height: 300px;
+}
+.footer-start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-body {
+}
+.footer-body ul{
+    margin: 0;
+    padding: 0;
+}
+.footer-body ul li{
+    list-style: none;
+    padding-bottom: 4px;
+    color: var(--t-color-primary-opa);
+}
+.footer-body ul li:first-child{
+    color: var(--t-color-primary);
+}
+.footer-body ul li a{
+    text-decoration: none;
+    color: var(--t-color-primary-opa);
 }
