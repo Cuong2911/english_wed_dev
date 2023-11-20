@@ -6,6 +6,8 @@
     --bg-color-light-btn: #fff;
 
     --t-color-primary: #fff;
+    --t-color-info:  #1CB0F6;
+    --t-color-dark:  #333;
 }
 
 .bg-color-primary {
@@ -23,4 +25,18 @@
 
 .text-color-primary {
     color: var(--t-color-primary) !important;
+}
+.text-color-info {
+    color: var(--t-color-info) !important;
+}
+.text-color-dark {
+    color: var(--t-color-dark) !important;
+}
+
+
+.w-100p {
+    width: 100%;
+}
+.w-70p {
+    width: 70%;
 }

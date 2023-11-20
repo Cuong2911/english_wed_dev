@@ -1,3 +1,7 @@
 .card-custom-container .card {
     border: none !important;
 }
+.card-img-custom-wrap {
+    display: flex;
+    justify-content: center;
+}

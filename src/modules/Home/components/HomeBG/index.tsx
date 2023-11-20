@@ -1,13 +1,21 @@
 
 import './HomeBG.css';
-import { Button, CardCustom } from '../../../../components';
+import { CardCustom } from '../../../../components';
 
 const index = () => {
-  return (
-    <div className='home-container bg-primary-home'>
+    return (
+        <div className='home-container bg-primary-home'>
             <div className="container">
                 <div className="home-content">
-                    <CardCustom/>
+                    <CardCustom
+                        isImageLeft
+                        imgSrc="/assets/img/home-bg.png"
+                        headContent="Chào mừng bạn đến với Learn English"
+                        descContent="Hệ Thống Học Tiếng Anh Thông Minh"
+                        btnTitle='Bắt đầu học ngay!'
+                        btnLink='#'
+                        typeCard='primary'
+                    />
                 </div>
             </div>
 
@@ -15,7 +23,7 @@ const index = () => {
                 <div className='home-bg-cloud' />
             </div>
         </div>
-  );
+    );
 };
 
 export default index;
