@@ -1,0 +1,21 @@
+.home-container {
+    padding-top: 90px;
+}
+.home-content {
+    padding-bottom: 230px;
+}
+.home-content .card {
+    border: none !important;
+}
+
+.home-bg-sub {
+    position: relative;
+}
+.home-bg-cloud {
+    background-image: url(../../../public/assets/img/home-cloud-bg.png);
+    height: 160px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -130px;
+}
