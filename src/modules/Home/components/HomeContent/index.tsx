@@ -52,7 +52,7 @@ const index = () => {
     <div className="container home-content-container ">
       {
         dataAboutHomePage.map((data,index) => {
-          return <div className="mt-5 mb-5">
+          return <div key={index} className="mt-5 mb-5">
             <CardCustom
               isImageLeft={index % 2 !== 0}
               imgSrc={`${urlImage}home-${index+1}.svg`}
