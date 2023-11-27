@@ -1,5 +1,6 @@
 
 import './Layout.css';
+import { ROUTES } from '../../../../configs/routes';
 
 interface Props {
     children: JSX.Element | JSX.Element[];
@@ -15,7 +16,9 @@ const Layout = (props: Props) => {
                     <div className="col-12 col-md-6 col-xl-7">
                         <div className="d-flex justify-content-center ">
                             <div className="col-12 col-xl-9">
-                                <span className='fw-boild h1 fs-1'>Learn English</span>
+                                <span className='fw-boild h1 fs-1 auth-layout-logo' >
+                                    <a href={ROUTES.home} className='text-color-dark'>Learn English</a>
+                                </span>
                                 <hr className="border-primary-subtle mb-4 boder-color-primary-dark" />
                                 <h2 className="h3 mb-4">Học tiếng anh ngay hôm nay.</h2>
                                 <p className="lead mb-5">Never stop learning because life never stops teaching.</p>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { redirect } from 'react-router-dom';
 
 import './Login.css';
 import { Layout } from '../components';
@@ -6,6 +7,17 @@ import { ROUTES } from '../../../configs/routes';
 
 const Login = () => {
     const [emailInput, setEmailInput] = useState("");
+    const [passwordInput, setPasswordInput] = useState("");
+    const emailInputHandle = (value: string) => {
+        setEmailInput(value);
+    };
+    const passwordInputHandle = (value: string) => {
+        setPasswordInput(value);
+    };
+
+    const onLogin = () => {
+        alert(`dang nhap! \n email: ${emailInput} \n pass: ${passwordInput}`);
+    };
 
     return (
         <Layout>
@@ -18,31 +30,35 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            <form action="POST">
+            <form>
                 <div className="row gy-3 overflow-hidden">
                     <div className="col-12">
-                        <div className="form-floating mb-3">
-                            <input type="email" className="form-control" name="email" id="email" placeholder="name@example.com" required />
-                            <label htmlFor="email" className="form-label">Email</label>
-                        </div>
+                        <input
+                            type="email"
+                            className="form-control p-3 mb-3"
+                            value={emailInput}
+                            name="email"
+                            id="email"
+                            placeholder="Nhập email"
+                            required
+                            onChange={e => emailInputHandle(e.target.value)}
+                        />
                     </div>
                     <div className="col-12">
-                        <div className="form-floating mb-3">
-                            <input type="password" className="form-control" name="password" id="password" value="" placeholder="Password" required />
-                            <label htmlFor="password" className="form-label">Mật Khẩu</label>
-                        </div>
-                    </div>
-                    <div className="col-12">
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" name="remember_me" id="remember_me" />
-                            <label className="form-check-label text-secondary" htmlFor="remember_me">
-                                Ghi nhớ đăng nhập
-                            </label>
-                        </div>
+                        <input
+                            type="password"
+                            className="form-control p-3 mb-3"
+                            name="password"
+                            id="password"
+                            value={passwordInput}
+                            placeholder="Nhập mật khẩu"
+                            required
+                            onChange={e => passwordInputHandle(e.target.value)}
+                        />
                     </div>
                     <div className="col-12">
                         <div className="d-grid">
-                            <button className="btn btn-primary btn-lg bg-form-btn boder-color-primary-dark" type="submit">Đăng nhập</button>
+                            <button className="btn btn-primary btn-lg bg-form-btn boder-color-primary-dark" type="submit" onClick={onLogin}>Đăng nhập</button>
                         </div>
                     </div>
                 </div>
@@ -50,7 +66,7 @@ const Login = () => {
             <div className="row">
                 <div className="col-12">
                     <div className="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end mt-4">
-                        <a href="#!">Forgot password</a>
+                        <a href={ROUTES.login}>Quên mật khẩu?</a>
                     </div>
                 </div>
             </div>

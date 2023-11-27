@@ -1,55 +1,84 @@
+import { useState } from 'react';
 
 import './Signup.css';
 import { Layout } from '../components';
+import { ROUTES } from '../../../configs/routes';
 
 const Signup = () => {
+    const [emailInput, setEmailInput] = useState("");
+    const [passwordInput, setPasswordInput] = useState("");
+    const [rePasswordInput, setRePasswordInput] = useState("");
+    const emailInputHandle = (value: string) => {
+        setEmailInput(value);
+    };
+    const passwordInputHandle = (value: string) => {
+        setPasswordInput(value);
+    };
+    const rePasswordInputHandle = (value: string) => {
+        setRePasswordInput(value);
+    };
+
+    const onSignup = () => {
+        alert(`dang ky! \n email: ${emailInput} \n pass: ${passwordInput} \n re pass: ${rePasswordInput}`);
+    };
+
+
     return (
         <Layout>
 
             <div className="row">
                 <div className="col-12">
                     <div className="mb-4">
-                        <h3>Sign in</h3>
-                        <p>Don't have an account? <a href="#!">Sign up</a></p>
+                        <h3>Đăng ký</h3>
+                        <p>Bạn đã có tài khoản?<a href={ROUTES.login} className='ms-1'>Đăng nhập</a></p>
                     </div>
                 </div>
             </div>
-            <form action="#!">
+            <form>
                 <div className="row gy-3 overflow-hidden">
                     <div className="col-12">
-                        <div className="form-floating mb-3">
-                            <input type="email" className="form-control" name="email" id="email" placeholder="name@example.com" required />
-                            <label htmlFor="email" className="form-label">Email</label>
-                        </div>
+                        <input
+                            type="email"
+                            className="form-control p-3 mb-3"
+                            value={emailInput}
+                            name="email"
+                            id="email"
+                            placeholder="Nhập email"
+                            required
+                            onChange={e => emailInputHandle(e.target.value)}
+                        />
                     </div>
                     <div className="col-12">
-                        <div className="form-floating mb-3">
-                            <input type="password" className="form-control" name="password" id="password" value="" placeholder="Password" required />
-                            <label htmlFor="password" className="form-label">Password</label>
-                        </div>
+                        <input
+                            type="password"
+                            className="form-control p-3 mb-3"
+                            name="password"
+                            id="password"
+                            value={passwordInput}
+                            placeholder="Nhập mật khẩu"
+                            required
+                            onChange={e => passwordInputHandle(e.target.value)}
+                        />
                     </div>
                     <div className="col-12">
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" value="" name="remember_me" id="remember_me" />
-                            <label className="form-check-label text-secondary" htmlFor="remember_me">
-                                Keep me logged in
-                            </label>
-                        </div>
+                        <input
+                            type="password"
+                            className="form-control p-3 mb-3"
+                            name="password"
+                            id="rePassword"
+                            value={rePasswordInput}
+                            placeholder="Nhập lại mật khẩu"
+                            required
+                            onChange={e => rePasswordInputHandle(e.target.value)}
+                        />
                     </div>
                     <div className="col-12">
                         <div className="d-grid">
-                            <button className="btn btn-primary btn-lg" type="submit">Log in now</button>
+                            <button className="btn btn-primary btn-lg bg-form-btn boder-color-primary-dark" type="submit" onClick={onSignup}>Đăng ký</button>
                         </div>
                     </div>
                 </div>
             </form>
-            <div className="row">
-                <div className="col-12">
-                    <div className="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end mt-4">
-                        <a href="#!">Forgot password</a>
-                    </div>
-                </div>
-            </div>
         </Layout>
     )
 };
