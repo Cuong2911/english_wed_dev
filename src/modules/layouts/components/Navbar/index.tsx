@@ -5,10 +5,18 @@ import {NavAuth} from '../index';
 
 import './Navbar.css';
 
-const Navbar = () => {
+interface Props {
+    itemActive: string;
+}
+
+const Navbar = (props:Props) => {
+    const { itemActive } = props;
 
     const user:string = localStorage.getItem("user-profile") || '';
     
+    console.log(itemActive);
+    
+
     return (
         <>
             <nav className="navbar fixed-top  navbar-expand-lg navbar-light bg-color-primary py-3">
@@ -22,19 +30,19 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link text-color-dark active" aria-current="page" href={ROUTES.home}>Trang chủ</a>
+                                <a className={`nav-link text-color-dark ${itemActive === ROUTES.home ? 'active' : ''}`} href={ROUTES.home}>Trang chủ</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-color-dark" href={ROUTES.home}>Học tập</a>
+                                <a className={`nav-link text-color-dark ${itemActive === ROUTES.learning ? 'active' : ''}`} href={ROUTES.learning}>Học tập</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-color-dark" href={ROUTES.home}>Kiểm tra</a>
+                                <a className={`nav-link text-color-dark ${itemActive === ROUTES.exam ? 'active' : ''}`} href={ROUTES.exam}>Kiểm tra</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-color-dark" href={ROUTES.home}>Trò chơi</a>
+                                <a className={`nav-link text-color-dark ${itemActive === ROUTES.game ? 'active' : ''}`} href={ROUTES.game}>Trò chơi</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-color-dark" href={ROUTES.home}>Giới thiệu</a>
+                                <a className={`nav-link text-color-dark ${itemActive === ROUTES.about ? 'active' : ''}`} href={ROUTES.about}>Giới thiệu</a>
                             </li>
                         </ul>
                     </div>
