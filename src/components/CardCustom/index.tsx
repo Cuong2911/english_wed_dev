@@ -16,8 +16,8 @@ interface Props {
 const index = (props: Props) => {
   const {isImageLeft = true, imgSrc = '',imgSize = 'default', headContent, descContent, btnTitle='', btnLink='', typeCard= 'primary'} = props;
   
-  const headContentClassName = typeCard === 'primary' ? 'text-color-primary fs-3': 'text-color-info fs-1 lh-1 fw-bold';
-  const descContentClassName = typeCard === 'primary' ? 'text-color-primary fs-1 lh-1 fw-bold': 'text-color-dark';
+  const headContentClassName = typeCard === 'primary' ? 'text-color-dark fs-3': 'text-color-info fs-1 lh-1 fw-bold';
+  const descContentClassName = typeCard === 'primary' ? 'text-color-dark fs-1 lh-1 fw-bold': 'text-color-dark';
   const imgClassName = imgSize === 'default' ? 'w-100p ' : 'w-70p ';
   return (
     <div className="container card-custom-container">

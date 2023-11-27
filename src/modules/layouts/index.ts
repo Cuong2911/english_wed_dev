@@ -1,4 +1,4 @@
-import Navbar from './Navbar';
-import Footer from './Footer';
+import DefaultLayout from './DefaultLayout';
+import NoLayout from './NoLayout';
 
-export { Navbar, Footer }
+export { DefaultLayout,NoLayout }

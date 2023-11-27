@@ -1,6 +1,5 @@
 .navbar-nav a {
     font-size: 18px;
-    color: var(--t-color-primary) !important;
 }
 .navbar-nav a.active {
     opacity: 0.5;

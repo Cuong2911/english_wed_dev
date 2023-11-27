@@ -1,5 +1,6 @@
 
 import './HomeBG.css';
+import { ROUTES } from '../../../../configs/routes';
 import { CardCustom } from '../../../../components';
 
 const index = () => {
@@ -13,7 +14,7 @@ const index = () => {
                         headContent="Chào mừng bạn đến với Learn English"
                         descContent="Hệ Thống Học Tiếng Anh Thông Minh"
                         btnTitle='Bắt đầu học ngay!'
-                        btnLink='#'
+                        btnLink={ROUTES.login}
                         typeCard='primary'
                     />
                 </div>

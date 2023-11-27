@@ -1,6 +1,7 @@
 
 import './Footer.css';
-import { Button } from '../../../components';
+import { ROUTES } from '../../../../configs/routes';
+import { Button } from '../../../../components';
 
 const index = () => {
     return (
@@ -9,7 +10,7 @@ const index = () => {
                 <div className="row pt-5">
                     <div className="col-12 footer-start" >
                         <h4 className="px-3">Học tiếng Anh.</h4>
-                        <Button textButton='Bắt đầu' />
+                        <Button textButton='Bắt đầu' btnLink={ROUTES.login}/>
                     </div>
                 </div>
                 <div className="row pt-5 pb-3 footer-body">
