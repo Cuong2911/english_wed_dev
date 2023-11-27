@@ -13,7 +13,7 @@ interface Props {
   typeCard?:string;
 }
 
-const index = (props: Props) => {
+const CardCustom = (props: Props) => {
   const {isImageLeft = true, imgSrc = '',imgSize = 'default', headContent, descContent, btnTitle='', btnLink='', typeCard= 'primary'} = props;
   
   const headContentClassName = typeCard === 'primary' ? 'text-color-dark fs-3': 'text-color-info fs-1 lh-1 fw-bold';
@@ -56,4 +56,4 @@ const index = (props: Props) => {
   );
 };
 
-export default index;
+export default CardCustom;

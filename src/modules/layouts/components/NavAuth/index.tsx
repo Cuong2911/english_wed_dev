@@ -13,7 +13,7 @@ interface Props {
     user: string;
 }
 
-const index = (props: Props) => {
+const NavAuth = (props: Props) => {
     const { user } = props;
     const userInfor: userLogin = JSON.parse(user);
     console.log(userInfor);
@@ -60,4 +60,4 @@ const index = (props: Props) => {
     )
 }
 
-export default index;
+export default NavAuth;

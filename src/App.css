@@ -5,6 +5,7 @@
 
     --bg-color-primary-btn: #313131;
     --bg-color-light-btn: #fff;
+    --bg-color-form-btn: #ffbc3e;
 
     --t-color-primary: #fff;
     --t-color-primary-opa: #303030;
@@ -12,6 +13,8 @@
     --t-color-dark:  #000000;
     --t-color-primary-dark: #d38900;
 
+    --boder-color-primary: #fff;
+    --boder-color-primary-dark: #000000;
 }
 
 .bg-color-primary {
@@ -29,6 +32,9 @@
 .bg-light-btn {
     background-color: var(--bg-color-light-btn) !important;
 }
+.bg-form-btn {
+    background-color: var(--bg-color-form-btn) !important;
+}
 
 .text-color-primary {
     color: var(--t-color-primary) !important;
@@ -43,6 +49,12 @@
     color: var(--t-color-dark) !important;
 }
 
+.boder-color-primary {
+    border-color: var(--boder-color-primary) !important;
+}
+.boder-color-primary-dark {
+    border-color: var(--boder-color-primary-dark) !important;
+}
 
 .w-100p {
     width: 100%;

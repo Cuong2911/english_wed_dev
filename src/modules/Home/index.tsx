@@ -5,7 +5,7 @@ import { Button } from '../../components';
 import { HomeBG, HomeContent } from './components';
 
 
-const index = () => {
+const Home = () => {
     return (
         <div className="home-page mb-5 pb-5">
             <HomeBG />
@@ -31,4 +31,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Home;

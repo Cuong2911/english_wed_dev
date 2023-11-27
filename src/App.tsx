@@ -11,7 +11,6 @@ function App() {
     //             localStorage.removeItem("user-profile");
     //             localStorage.setItem("user-profile", JSON.stringify(json));
     //         })
-    
     return (
         <Routes>
             {publicRoutes.map((route, index) => {

@@ -46,7 +46,7 @@ const dataAboutHomePage: Array<IdataAboutHomePage> =[
   },
 ];
 
-const index = () => {
+const HomeContent = () => {
   const urlImage = "https://www.voca.vn/assets/images/home/";
   return (
     <div className="container home-content-container ">
@@ -70,4 +70,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default HomeContent;

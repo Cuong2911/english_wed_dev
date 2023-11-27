@@ -5,7 +5,7 @@ import {NavAuth} from '../index';
 
 import './Navbar.css';
 
-const index = () => {
+const Navbar = () => {
 
     const user:string = localStorage.getItem("user-profile") || '';
     
@@ -53,4 +53,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Navbar;

@@ -3,7 +3,7 @@ interface Props {
     children: JSX.Element | JSX.Element[];
 }
 
-const index = (props : Props) => {
+const NoLayout = (props : Props) => {
     const {children} = props;
 
     return (
@@ -13,4 +13,4 @@ const index = (props : Props) => {
     );
 };
 
-export default index;
+export default NoLayout;

@@ -3,7 +3,7 @@ import './HomeBG.css';
 import { ROUTES } from '../../../../configs/routes';
 import { CardCustom } from '../../../../components';
 
-const index = () => {
+const HomeBG = () => {
     return (
         <div className='home-container bg-primary-home'>
             <div className="container">
@@ -27,4 +27,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default HomeBG;

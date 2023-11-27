@@ -3,7 +3,7 @@ import './Footer.css';
 import { ROUTES } from '../../../../configs/routes';
 import { Button } from '../../../../components';
 
-const index = () => {
+const Footer = () => {
     return (
         <div className="footer-container bg-color-primary-dark text-color-primary">
             <div className="container">
@@ -60,4 +60,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Footer;
